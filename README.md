@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Viviane Trindade - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made to show my timeline of projects that I worked from been a hobby coder to a software developer.
 
 ## Available Scripts
 
