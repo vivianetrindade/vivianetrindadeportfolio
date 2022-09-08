@@ -4,7 +4,8 @@ import {
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
-import { Clipboard2Data, CodeSquare } from "react-bootstrap-icons";
+import { CodeSquare } from "react-bootstrap-icons";
+
 
 interface Project {
   id: number,
@@ -38,18 +39,34 @@ const Timeline: React.FC = () => {
       .catch((error: Error)=> {
         console.log(error)
       }) 
+      
   }, [])
+  console.log(projects, 'projects')
   return (
     <section >
-     <h1 className='title'>
+     <h1 className='title'>Projects Timeline</h1>
       <VerticalTimeline>
         {projects.map(project => {
-          return (<VerticalTimelineElement key={project.id} >
+          return (<VerticalTimelineElement className="vertical-timeline-element--work" 
+            key={project.id}
+            contentStyle={{background: '#fff'}}
+            iconStyle={{background: 'rgb(122, 49, 93)'}}
+            icon={<CodeSquare/>} >
             <h3 className='vertical-timeline-element-title'>{project.name}</h3>
+            <h5 className='vertical-timeline-element-subtitle'>{project.description}</h5>
+            {project.topics?.map(topic => {
+              return (
+              <section className='topics-container'>
+                <span className='topic'>{topic} </span>
+              </section>)
+            })}
+            <br/>
+            <a className='button' href={project.html_url}>View Project</a>
+            
           </VerticalTimelineElement>)
         })}
       </VerticalTimeline>
-     </h1>
+     
     </section>
   )
 }

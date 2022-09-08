@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Banner from './pages/Banner';
 import Technologies from './pages/Technologies';
 import Timeline from './pages/Timeline';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <Technologies/>
       <Timeline/>
+      <Contact/>
     </div>
   );
 }
