@@ -43,7 +43,7 @@ const Timeline: React.FC = () => {
   }, [])
   console.log(projects, 'projects')
   return (
-    <section >
+    <section id='projectstimeline'>
      <h1 className='title'>Projects Timeline</h1>
       <VerticalTimeline>
         {projects.map(project => {

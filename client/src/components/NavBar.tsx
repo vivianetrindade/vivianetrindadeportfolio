@@ -3,9 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.png'
 import Icon1 from '../assets/github.png';
-import Icon2 from '../assets/linkedin.png'
+import Icon2 from '../assets/linkedin.png';
+import {
+  BrowserRouter,
+} from "react-router-dom";
 
 const NavbarComponent: React.FC = () => {
 const [activeLink, setActiveLink] = useState<String>('home');
@@ -31,6 +34,8 @@ const updateActiveLink = (path: String) => {
 
 }
   return (
+    <BrowserRouter>
+    
     <Navbar expand="md" className={scrolled ? 'scrolled': ''}>
       <Container>
         
@@ -44,7 +49,7 @@ const updateActiveLink = (path: String) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
-              onClick={() => updateActiveLink('home')}>Home</Nav.Link>
+              onClick={() => updateActiveLink('home')}> Home</Nav.Link>
             <Nav.Link href="#technologiesandtools" className={activeLink === 'technologiesandtools' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => updateActiveLink('technologiesandtools')}>Skills and Technologies</Nav.Link>
             <Nav.Link href="#projectstimeline"className={activeLink === 'projectstimeline' ? 'active navbar-link' : 'navbar-link'}
@@ -72,6 +77,8 @@ const updateActiveLink = (path: String) => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+   
+    </BrowserRouter>
   );
 }
 

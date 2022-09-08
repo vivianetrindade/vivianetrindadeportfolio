@@ -25,7 +25,7 @@ const Technologies: React.FC = () => {
     },
   };
   return (
-    <section className="skill" id="skills">
+    <section className="skill" id="technologiesandtools">
       <Container>
         <Row>
           <Col>

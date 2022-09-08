@@ -1,5 +1,6 @@
-import React, {FormEvent, useRef, useState} from "react";
+import React, {ChangeEvent, FormEvent, useRef, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
+
 interface FormDetails {
   firstName: string,
   lastName: string,
@@ -14,7 +15,14 @@ interface StatusDetails{
 }
 
 const Contact: React.FC = () => {
-  const [formInfo, setFormInfo] = useState<FormDetails>({} as FormDetails);
+  const initialForm: FormDetails = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  }
+  const [formInfo, setFormInfo] = useState<FormDetails>(initialForm);
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState<StatusDetails>({} as StatusDetails);
   const firstNameInput = useRef<HTMLInputElement>(null);
@@ -23,10 +31,7 @@ const Contact: React.FC = () => {
   const phoneInput = useRef<HTMLInputElement>(null);
   const messageInput = useRef<HTMLTextAreaElement>(null);
 
-  
-
-  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
     const data = {
       firstName: firstNameInput.current!.value,
       lastName: lastNameInput.current!.value,
@@ -37,10 +42,39 @@ const Contact: React.FC = () => {
     setFormInfo(data);
   }
 
+  const submitHandler = async(e: FormEvent<HTMLFormElement> ) => {
+    e.preventDefault();
+    
+    setButtonText('Sending...');
+
+    let response = await fetch('http://localhost:5001/contact', {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formInfo),
+    });
+    setButtonText('Send');
+    let result = await response.json();
+    
+    setFormInfo({...formInfo, firstName: '', lastName: '', email: '', phone: '', message: ''});
+    firstNameInput.current!.value = '';
+    lastNameInput.current!.value = '';
+    emailInput.current!.value = '';
+    phoneInput.current!.value = '';
+    messageInput.current!.value = '';
+
+    if(result.rejected.length === 0){
+      setStatus({success: true, message: 'Message sent successfully.'});
+    } else {
+      setStatus({ success: false, message: 'Something went wrong, please try again later.'})
+    }
+  }
+
   
 
   return (
-    <section className='contact' id="connect">
+    <section className='contact' id="contact">
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
@@ -55,6 +89,7 @@ const Contact: React.FC = () => {
                   name="firstName" 
                   placeholder='First Name'
                   ref={firstNameInput}
+                  onChange={handleChange}
                   ></input>
                 </Col>
                 <Col size={12} sm={6} className='px-1'>
@@ -62,6 +97,7 @@ const Contact: React.FC = () => {
                   name="lastName"
                   placeholder='Last Name'
                   ref={lastNameInput}
+                  onChange={handleChange}
                   ></input>
                 </Col>
                 <Col size={12} sm={6} className='px-1'>
@@ -69,6 +105,7 @@ const Contact: React.FC = () => {
                   name="email"
                   placeholder='Email Adress'
                   ref={emailInput}
+                  onChange={handleChange}
                   ></input>
                 </Col>
                 <Col size={12} sm={6} className='px-1'>
@@ -76,13 +113,15 @@ const Contact: React.FC = () => {
                   name="phone" 
                   placeholder='Phone Number'
                   ref={phoneInput}
+                  onChange={handleChange}
                   ></input>
                 </Col>
                 <Col size={12} className='px-1'>
                   <textarea rows={6} 
                   placeholder='Message'
                   name="message"
-                  ref={messageInput}></textarea>
+                  ref={messageInput}
+                  onChange={handleChange}></textarea>
                   <button type="submit"><span>{buttonText}</span></button>
                 </Col>
                 {status.message && 
