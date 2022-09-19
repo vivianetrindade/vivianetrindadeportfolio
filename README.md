@@ -7,13 +7,14 @@
 
 # Viviane Trindade - Portfolio
 
-> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. The website has a backend to send responsable to send the e-mail of the people that wants to connect.
+> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. The website has a backend to send  the e-mails of the people that wants to contact me. And a FrontEnd that show the knowledge I have on react and typeScript.
 
 ## TechStack
 * TypeScript
 * React
 * React BootStrap
 * React BootStrap Icons
+* Node JS
 * Express
 * Axios
 * Nodemailer
@@ -57,6 +58,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Available Scripts in the BackEnd
+
+In the project directory *server*, you can run:
 
 ### `npm run build`
 
