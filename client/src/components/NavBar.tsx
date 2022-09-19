@@ -56,22 +56,11 @@ const updateActiveLink = (path: String) => {
               onClick={() => updateActiveLink('projectstimeline')}>Projects Timeline</Nav.Link>
             <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => updateActiveLink('contact')}>Contact</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
           <span className='navbar-text'>
             <div className='social_icon'>
               <a href='https://github.com/vivianetrindade' target='_blank' rel='noreferrer'><img className='icons'src={Icon1} alt='github icon'/></a>
-              <a href='https://www.linkedin.com/in/viviane-trindade/'><img className='icons' src={Icon2} alt='linkedin icon'/></a>
+              <a href='https://www.linkedin.com/in/viviane-trindade/' target='_blank' rel='noreferrer'><img className='icons' src={Icon2} alt='linkedin icon'/></a>
             </div>
           </span>
         </Navbar.Collapse>
