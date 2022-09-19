@@ -56,8 +56,10 @@ const getContactEmail = (firstName, lastName, email, phone, message) => __awaite
     const redirectUri = process.env.REDIRECT_URI;
     const refreshToken = process.env.REFRESH_TOKEN;
     const OAuth2Client = new googleapis_1.google.auth.OAuth2(customerId, customerSecret, redirectUri);
+    console.log(OAuth2Client, 'AUTH');
     OAuth2Client.setCredentials({ refresh_token: refreshToken });
     const accessToken = yield OAuth2Client.getAccessToken();
+    console.log(accessToken, 'token');
     const contactEmail = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,

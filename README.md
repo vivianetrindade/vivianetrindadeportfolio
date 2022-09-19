@@ -7,20 +7,17 @@
 
 # Viviane Trindade - Portfolio
 
-> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. The website has a backend to send  the e-mails of the people that wants to contact me. And a FrontEnd that show the knowledge I have on react and typeScript.
+> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. 
 
 ## TechStack
 * TypeScript
 * React
 * React BootStrap
 * React BootStrap Icons
-* Node JS
-* Express
-* Axios
-* Nodemailer
+* EmailJs
 
 
-## Available Scripts in the FrontEnd
+## Available Scripts
 
 In the project directory *client*, you can run:
 
@@ -56,24 +53,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Available Scripts in the BackEnd
-
-In the project directory *server*, you can run:
-
-### `npm run build`
-
-Builds the compiled directory of JavaScript.
-
-### `npm start`
-
-Runs the compiled app in the development mode using node in the file ./dist/index.js.\
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
-
-### `npm run dev`
-
-Runs the npx tsc to compile the app in watch mode concorrently with nodemon to run the compiled app in the development mode using node in the file ./dist/index.js.\
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 
 ## Author

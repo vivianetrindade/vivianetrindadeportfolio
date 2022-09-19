@@ -1,6 +1,7 @@
 import express, { Router, Request, Response } from "express";
 import cors from 'cors';
 // import nodemailer from 'nodemailer';
+
 const nodemailer = require('nodemailer')
 import { google } from 'googleapis';
 import dotenv from 'dotenv';
@@ -30,12 +31,12 @@ const OAuth2Client = new google.auth.OAuth2(
   customerSecret,
   redirectUri
 );
-
+console.log(OAuth2Client, 'AUTH');
 OAuth2Client.setCredentials({refresh_token: refreshToken})
 
 
   const accessToken = await OAuth2Client.getAccessToken();
-
+  console.log(accessToken, 'token');
   const contactEmail = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -78,7 +79,6 @@ router.post('/contact', (req: Request, res: Response) => {
   const email: string = req.body.email;
   const message: string = req.body.message;
   const phone: string = req.body.phone;
-  
   getContactEmail(firstName, lastName, email, phone, message)
   .then(response => res.json(response))
   .catch(error => res.json(error.message))
