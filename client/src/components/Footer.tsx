@@ -15,8 +15,8 @@ const Footer = () => {
           </Col>
           <Col sm={6} className='text-center text-sm-end'>
           <div className='social_icon'>
-              <a href='https://github.com/vivianetrindade' target='_blank' rel='noreferrer'><img className='icons'src={Icon2} alt='github icon'/></a>
-              <a href='https://www.linkedin.com/in/viviane-trindade/' target='_blank' rel='noreferrer'><img className='icons' src={Icon1} alt='linkedin icon'/></a>
+              <a href='https://github.com/vivianetrindade' target='_blank' rel='noreferrer'><img className='icons'src={Icon1} alt='github icon'/></a>
+              <a href='https://www.linkedin.com/in/viviane-trindade/' target='_blank' rel='noreferrer'><img className='icons' src={Icon2} alt='linkedin icon'/></a>
             </div>
             <p>Copyrigth 2022 Rights reserved by Viviane Trindade</p>
           </Col>

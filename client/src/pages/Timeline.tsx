@@ -61,7 +61,7 @@ const Timeline: React.FC = () => {
               </section>)
             })}
             <br/>
-            <a className='button' href={project.html_url}>View Project</a>
+            <a className='button' href={project.html_url} target='_blank' rel='noreferrer'>View Project</a>
             
           </VerticalTimelineElement>)
         })}

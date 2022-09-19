@@ -7,7 +7,7 @@
 
 # Viviane Trindade - Portfolio
 
-> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. 
+> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. This website was deplyed using Render.
 
 ## TechStack
 * TypeScript
@@ -59,7 +59,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 👤 **Viviane Trindade**
 
-* Website: https://www.linkedin.com/in/viviane-trindade/
+* Website: https://vivianetrindadeportfolio.onrender.com/
 * Github: [@vivianetrindade](https://github.com/vivianetrindade)
 * LinkedIn: [@vivianetrindade](https://linkedin.com/in/vivianetrindade)
 
