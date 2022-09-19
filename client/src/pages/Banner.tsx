@@ -12,7 +12,7 @@ const Banner: React.FC = () => {
   const toRotate: String [] = ['FullStack Developer', 'Software Developer', 'Web Developer'];
   const [text, setText] = useState('');
   const [intervalNumber, setIntervalNumber] = useState<number>(300 - Math.random() * 100);
-  const period = 2000;
+  const period = 1000;
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -53,7 +53,8 @@ const Banner: React.FC = () => {
             <p>I love arrange solutions for helping people to solve their problems. Being a software developer gave me this opportunity. </p>
             <p>This is a space to you know more about what I worked on and to make new connections. </p>
             <p>Please feel free to have a look and reach me on LinkedIn.</p>
-            <button onClick={() => console.log('connect')}> Let's connect <ArrowRightCircle size={25}/></button>
+            
+            <button> <a href='#contact'>Let's connect <ArrowRightCircle size={25}/></a></button>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={myPicture} alt='My picture'/>

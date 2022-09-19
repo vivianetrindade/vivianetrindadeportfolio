@@ -1,10 +1,27 @@
+<h1 align="center">Welcome to my-portfolio 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/my-portfolio" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/my-portfolio.svg">
+  </a>
+</p>
+
 # Viviane Trindade - Portfolio
 
-This project was made to show my timeline of projects that I worked from been a hobby coder to a software developer.
+> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. The website has a backend to send responsable to send the e-mail of the people that wants to connect.
 
-## Available Scripts
+## TechStack
+* TypeScript
+* React
+* React BootStrap
+* React BootStrap Icons
+* Express
+* Axios
+* Nodemailer
 
-In the project directory, you can run:
+
+## Available Scripts in the FrontEnd
+
+In the project directory *client*, you can run:
 
 ### `npm start`
 
@@ -39,8 +56,31 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Available Scripts in the BackEnd
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `npm run build`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Builds the compiled directory of JavaScript.
+
+### `npm start`
+
+Runs the compiled app in the development mode using node in the file ./dist/index.js.\
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+
+### `npm run dev`
+
+Runs the npx tsc to compile the app in watch mode concorrently with nodemon to run the compiled app in the development mode using node in the file ./dist/index.js.\
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+
+
+## Author
+
+👤 **Viviane Trindade**
+
+* Website: https://www.linkedin.com/in/viviane-trindade/
+* Github: [@vivianetrindade](https://github.com/vivianetrindade)
+* LinkedIn: [@vivianetrindade](https://linkedin.com/in/vivianetrindade)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!

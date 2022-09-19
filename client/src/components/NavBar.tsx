@@ -70,8 +70,8 @@ const updateActiveLink = (path: String) => {
           </Nav>
           <span className='navbar-text'>
             <div className='social_icon'>
-              <a href='https://github.com/vivianetrindade'><img className='icons'src={Icon2} alt='github icon'/></a>
-              <a href='https://www.linkedin.com/in/viviane-trindade/'><img className='icons' src={Icon1} alt='linkedin icon'/></a>
+              <a href='https://github.com/vivianetrindade' target='_blank' rel='noreferrer'><img className='icons'src={Icon1} alt='github icon'/></a>
+              <a href='https://www.linkedin.com/in/viviane-trindade/'><img className='icons' src={Icon2} alt='linkedin icon'/></a>
             </div>
           </span>
         </Navbar.Collapse>

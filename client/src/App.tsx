@@ -6,6 +6,7 @@ import Banner from './pages/Banner';
 import Technologies from './pages/Technologies';
 import Timeline from './pages/Timeline';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Technologies/>
       <Timeline/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import {
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
-import { CodeSquare } from "react-bootstrap-icons";
+import { CodeSquare, BookmarkStarFill } from "react-bootstrap-icons";
 
 
 interface Project {
@@ -65,6 +65,9 @@ const Timeline: React.FC = () => {
             
           </VerticalTimelineElement>)
         })}
+        <VerticalTimelineElement
+        iconStyle={{background: 'rgb(122, 49, 93)'}}
+        icon={<BookmarkStarFill/>}></VerticalTimelineElement>
       </VerticalTimeline>
      
     </section>
