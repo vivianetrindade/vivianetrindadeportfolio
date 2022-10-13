@@ -52,6 +52,8 @@ const updateActiveLink = (path: String) => {
               onClick={() => updateActiveLink('home')}> Home</Nav.Link>
             <Nav.Link href="#technologiesandtools" className={activeLink === 'technologiesandtools' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => updateActiveLink('technologiesandtools')}>Skills and Technologies</Nav.Link>
+            <Nav.Link href="#experienceandeducation" className={activeLink === 'experienceandeducation' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => updateActiveLink('experienceandeducation')}>Experience and Education</Nav.Link>
             <Nav.Link href="#projectstimeline"className={activeLink === 'projectstimeline' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => updateActiveLink('projectstimeline')}>Projects Timeline</Nav.Link>
             <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}

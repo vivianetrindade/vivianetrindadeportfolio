@@ -82,13 +82,11 @@ button {
   background-color: transparent;
 }
 
-
-
 nav.navbar .navbar-nav .nav-link.navbar-link{
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
-  padding: 0 25px;
+  /* padding: 0 25px; */
   font-size: 18px;
   opacity: 0.75;
 }
@@ -101,7 +99,10 @@ span.navbar-text{
   display: flex;
   align-items: center;
 }
-
+.show{
+  background-color: #121212;
+  transition: all 0.15s ease-in-out;
+}
 .social_icon a{
   width: 42px;
   height: 42px;
@@ -120,7 +121,7 @@ span.navbar-text{
   width: 42px;
   height: 42px;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #121212;
   border-radius: 50%;
   transform: scale(0);
     transition: 0.3s ease-in-out;
@@ -254,12 +255,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 500px;
 }
 
-@media screen and (max-width: 600px) {
-  .banner img {
-    margin: 20px;
-    width: 300px;
-  }
-}
 
 .txt-rotate > .wrap {
   border-right: 0.08em, solid #666;
@@ -449,4 +444,84 @@ footer p {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/* experience */
+.experience h2{
+  text-align: center;
+}
+.experience__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.experience__container > div{
+  background: #66294E;
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: all 0.15s ease-in-out;
+}
+
+.experience__container > div:hover{
+  background: transparent;
+  border-color: #a85486;
+  cursor: default;
+}
+
+.experience__container > div h3{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experience__content, .education__content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+.experience__details, .education__details {
+  display: flex;
+}
+
+.check{
+  width: 6rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner img {
+    margin: 20px;
+    width: 350px;
+  }
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
+  .experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .banner img {
+    margin: 20px;
+    width: 300px;
+  }
+
+  .experience__content, .education__content{
+    grid-template-columns: 1fr;
+  }
+  
+  .experience__container{
+    gap: 1rem
+  }
+
+  /* .experience__container > div{
+    width: 100%;
+    padding: 2rem 1rem;
+  } */
 }
