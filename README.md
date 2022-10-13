@@ -7,7 +7,7 @@
 
 # Viviane Trindade - Portfolio
 
-> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. This website was deplyed using Render.
+> This website was created to be my first potfolio. The portfolio is a way to show case the projects I worked on and to be able connect with possible employers. This website was deployed using Render.
 
 ## TechStack
 * TypeScript
