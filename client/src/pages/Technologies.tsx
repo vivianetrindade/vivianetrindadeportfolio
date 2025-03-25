@@ -47,6 +47,9 @@ const Technologies: React.FC = () => {
                   <p>
                     <CodeSlash size={18} /> TypeScript
                   </p>
+                  <p>
+                    <CodeSlash size={18} /> Scala
+                  </p>
                 </div>
                 <div className="item">
                   <h5>FrontEnd</h5>
@@ -75,31 +78,25 @@ const Technologies: React.FC = () => {
                     <CodeSlash size={18} /> Express
                   </p>
                   <p>
-                    <CodeSlash size={18} /> REST/
-                    GraphQL
+                    <CodeSlash size={18} /> REST/ GraphQL
                   </p>
                   <p>
-                    <CodeSlash size={18} /> MongoDB/
-                    
-                    PostgreSQL
+                    <CodeSlash size={18} /> MongoDB/ PostgreSQL
                   </p>
                 </div>
                 <div className="item">
                   <h5>Tools</h5>
                   <p>
-                    <CodeSlash size={18} /> Git/
-                    GitHub
+                    <CodeSlash size={18} /> Git/ GitHub
                   </p>
                   <p>
                     <CodeSlash size={18} /> Cypress
                   </p>
                   <p>
-                    <CodeSlash size={18} /> Mocha/
-                    Jest
+                    <CodeSlash size={18} /> Mocha/ Jest
                   </p>
                   <p>
-                    <CodeSlash size={18} /> Heroku/
-                    Netlify
+                    <CodeSlash size={18} /> Kubernetes
                   </p>
                   <p>
                     <CodeSlash size={20} /> Mob Programming
